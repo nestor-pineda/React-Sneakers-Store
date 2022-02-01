@@ -7,4 +7,12 @@ export const FooterBlock = styled.div`
   background-color: white;
   margin: 0px 15px;
   padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: flex-start;
+  & a {
+    display: inline-flex;
+    text-decoration: none;
+  }
 `;

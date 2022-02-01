@@ -1,10 +1,14 @@
 import { FooterBlock } from "./styles";
 
-const ColumnLinks = () => {
+const ColumnLinks = ({ menuItems, title }) => {
   return (
     <FooterBlock className="footer-block">
-      <p>Links</p>
-      <p>Links</p>
+      <h3>{title}</h3>
+      {menuItems.map((item) => (
+        <a key={item.text} href={item.url} className="footer-link" button>
+          {item.icon} {item.text}
+        </a>
+      ))}
     </FooterBlock>
   );
 };
