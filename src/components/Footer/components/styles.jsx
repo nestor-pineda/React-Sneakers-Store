@@ -14,5 +14,12 @@ export const FooterBlock = styled.div`
   & a {
     display: inline-flex;
     text-decoration: none;
+    color: #ff0000;
+    &:hover {
+      color: #fff000;
+    }
+    & svg {
+      margin-right: 10px;
+    }
   }
 `;
