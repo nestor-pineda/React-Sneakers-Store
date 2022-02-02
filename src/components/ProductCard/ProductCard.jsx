@@ -5,6 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Link } from "react-router-dom";
 
 export default function ProductCard({ sneakers }) {
   return (
@@ -17,11 +18,13 @@ export default function ProductCard({ sneakers }) {
               {item.name}
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica
+              Price: {item.retailPrice}
             </Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Buy Product</Button>
+            <Button size="small">
+              <Link to={`/product/${item.id}`}>Read more</Link>
+            </Button>
           </CardActions>
         </Card>
       ))}
