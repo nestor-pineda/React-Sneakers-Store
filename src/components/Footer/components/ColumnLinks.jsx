@@ -5,7 +5,7 @@ const ColumnLinks = ({ menuItems, title }) => {
     <FooterBlock className="footer-block">
       <h3>{title}</h3>
       {menuItems.map((item) => (
-        <a key={item.text} href={item.url} className="footer-link" button>
+        <a key={item.text} href={item.url} className="footer-link">
           {item.icon} {item.text}
         </a>
       ))}
