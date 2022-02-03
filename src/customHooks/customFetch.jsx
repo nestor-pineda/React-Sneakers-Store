@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 const useFetch = (url) => {
   const [apiData, setApiData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch(url, {
@@ -13,16 +14,24 @@ const useFetch = (url) => {
       },
     })
       .then((res) => {
+        if (!res.ok) {
+          throw Error("No hemos podido encontrar los datos");
+        }
         return res.json();
       })
       .then((data) => {
         console.log(data);
         setApiData(data);
         setLoading(false);
+        setError(null);
+      })
+      .catch((error) => {
+        setLoading(false);
+        setError(error.message);
       });
   }, [url]);
 
-  return { apiData, loading };
+  return { apiData, loading, error };
 };
 
 export default useFetch;

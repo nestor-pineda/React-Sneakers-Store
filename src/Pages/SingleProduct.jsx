@@ -4,11 +4,12 @@ import useFetch from "../customHooks/customFetch";
 
 const SingleProduct = () => {
   const { id } = useParams();
-  const { apiData: sneaker, loading } = useFetch("https://v1-sneakers.p.rapidapi.com/v1/sneakers/" + id);
+  const { apiData: sneaker, loading, error } = useFetch("https://v1-sneakers.p.rapidapi.com/v1/sneakers/" + id);
 
   return (
     <div>
       <h1>This is the singel product page with id: {id}</h1>
+      {error && <div>{error}</div>}
       {loading && <div>Loading...</div>}
       {sneaker && (
         <>

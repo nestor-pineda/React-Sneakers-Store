@@ -12,7 +12,15 @@ export default function ProductCard({ sneakers }) {
     <>
       {sneakers.results.map((item) => (
         <Card key={item.id} sx={{ maxWidth: 345 }}>
-          <CardMedia component="img" height="140" image={item.media.imageUrl} alt="green iguana" />
+          {/* <CardMedia component="img" height="140" image={item.media.imageUrl} alt="green iguana" /> */}
+          <CardMedia
+            component="img"
+            height="140"
+            image={
+              item.media.imageUrl != null ? item.media.imageUrl : "https://images.stockx.com/images/Converse-Chuck-Taylor-All-Star-Pokemon-Poke-Ball.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1641606351"
+            }
+            alt="green iguana"
+          />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               {item.name}
@@ -31,3 +39,5 @@ export default function ProductCard({ sneakers }) {
     </>
   );
 }
+
+// sneakers.results
