@@ -5,7 +5,10 @@ import * as S from "./styles";
 const Navbar = () => {
   return (
     <S.StyledNav>
-      <S.StyledLogo to="/">logo</S.StyledLogo>
+      <S.StyledLogo to="/">
+        <img src="/images/logo-sneakers-animation.svg" alt="logo" />
+      </S.StyledLogo>
+
       <S.StyledLinksGroup className="wrapper">
         {/* <S.StyledLink to="/">Home</S.StyledLink> */}
         <S.StyledLink to="/adidas">Nike</S.StyledLink>
