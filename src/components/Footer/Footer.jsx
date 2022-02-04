@@ -1,5 +1,7 @@
 import { StyledFooter } from "./styles";
 import ColumnLinks from "./components/ColumnLinks";
+import Copyrigh from "./components/Coyright";
+import LogoFooter from "./components/LogoFooter";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -55,10 +57,14 @@ const Footer = () => {
   ];
 
   return (
-    <StyledFooter>
-      <ColumnLinks menuItems={menuItems.filter((item) => item.position === "rrss")} title="RRSS" />
-      <ColumnLinks menuItems={menuItems.filter((item) => item.position === "contact")} title="Contact" />
-    </StyledFooter>
+    <>
+      <StyledFooter>
+        <ColumnLinks menuItems={menuItems.filter((item) => item.position === "rrss")} title="RRSS" />
+        <ColumnLinks menuItems={menuItems.filter((item) => item.position === "contact")} title="Contact" />
+        <LogoFooter />
+      </StyledFooter>
+      <Copyrigh />
+    </>
   );
 };
 

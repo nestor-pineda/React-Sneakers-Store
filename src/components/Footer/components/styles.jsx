@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const FooterBlock = styled.div`
   width: 100%;
-  max-width: 300px;
-  border-right: 1px solid black;
+  max-width: 250px;
   background-color: white;
   margin: 0px 15px;
   padding: 0 10px;
@@ -14,7 +13,7 @@ export const FooterBlock = styled.div`
   & a {
     display: inline-flex;
     text-decoration: none;
-    color: #ff0000;
+    color: #232323;
     &:hover {
       color: #fff000;
     }
@@ -22,4 +21,24 @@ export const FooterBlock = styled.div`
       margin-right: 10px;
     }
   }
+`;
+
+export const StyledLogoFooter = styled.div`
+  width: 100%;
+  max-width: 500px;
+  background-color: white;
+  margin: 0px 15px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-items: flex-sart;
+`;
+
+export const StyledCopyright = styled.div`
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  border-top: 1px solid #000;
+  text-align: center;
 `;

@@ -1,15 +1,19 @@
-import { Link } from "react-router-dom";
-import { StyledNav } from "./styles";
+import {} from "./styles";
+
+import * as S from "./styles";
 
 const Navbar = () => {
   return (
-    <StyledNav>
-      <h1 className="logo">logo</h1>
-      <div className="links">
-        <Link to="/">Home</Link>
-        <Link to="/add">Add</Link>
-      </div>
-    </StyledNav>
+    <S.StyledNav>
+      <S.StyledLogo to="/">logo</S.StyledLogo>
+      <S.StyledLinksGroup className="wrapper">
+        {/* <S.StyledLink to="/">Home</S.StyledLink> */}
+        <S.StyledLink to="/adidas">Nike</S.StyledLink>
+        <S.StyledLink to="/adidas">Adidas</S.StyledLink>
+        <S.StyledLink to="/adidas">Reebook</S.StyledLink>
+        <S.StyledLink to="/adidas">Asycs</S.StyledLink>
+      </S.StyledLinksGroup>
+    </S.StyledNav>
   );
 };
 

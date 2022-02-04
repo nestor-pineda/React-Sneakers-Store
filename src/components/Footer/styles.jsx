@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
-  background-color: #ccc;
+  background-color: #fff;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
 
