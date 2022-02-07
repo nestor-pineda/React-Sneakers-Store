@@ -8,11 +8,11 @@ export const ProductInfo = styled.div`
   width: 100%;
   border-bottom: 1px solid #1e1e1e;
   & .product-img {
-    width: 96vw;
-    /* height: 200px; */
+    width: 98vw;
+    margin-top: 10px;
     background: #fff center center/cover no-repeat;
     box-sizing: border-box;
-    aspect-ratio: 9 / 5;
+    aspect-ratio: 9 / 6;
   }
   & .product-info {
     width: 100%;
@@ -53,9 +53,6 @@ export const ProductInfo = styled.div`
     align-items: flex-start;
     & .product-img {
       width: 45%;
-      /* background: #fff center center/cover no-repeat;
-    box-sizing: border-box;
-    aspect-ratio: 9 / 5; */
     }
     & .product-info {
       width: 45%;
