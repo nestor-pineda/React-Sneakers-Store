@@ -78,7 +78,7 @@ export const StyledLink = styled(Link)`
     position: relative;
     transition: 0.5s color ease;
     text-decoration: none;
-    color: #81b3d2;
+    color: #fff;
     font-size: 1.2em;
   }
   &:active {
