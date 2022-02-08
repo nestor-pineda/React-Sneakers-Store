@@ -2,6 +2,7 @@ import ProductCard from "../components/ProductCard/ProductCard";
 import useFetch from "../customHooks/customFetch";
 import { Products } from "./styles";
 import { useParams } from "react-router-dom";
+import SingleProductCarousel from "../components/SIngleProductCarousel/SingleProductCarousel";
 
 const Home = () => {
   const { brand } = useParams();
