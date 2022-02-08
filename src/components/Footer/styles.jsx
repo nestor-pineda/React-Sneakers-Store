@@ -7,6 +7,7 @@ export const StyledFooter = styled.footer`
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
+  border-top: 1px solid #1e1e1e;
 
   & h1 {
     color: #ff0000;

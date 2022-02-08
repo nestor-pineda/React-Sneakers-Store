@@ -6,7 +6,7 @@ export const ProductInfo = styled.div`
   justify-content: center;
   align-items: flex-start;
   width: 100%;
-  border-bottom: 1px solid #1e1e1e;
+  /* border-bottom: 1px solid #1e1e1e; */
   & .product-img {
     width: 98vw;
     margin-top: 10px;

@@ -13,9 +13,9 @@ export const FooterBlock = styled.div`
   & a {
     display: inline-flex;
     text-decoration: none;
-    color: #232323;
+    color: #1e1e1e;
     &:hover {
-      color: #fff000;
+      color: #d73444;
     }
     & svg {
       margin-right: 10px;
@@ -38,7 +38,9 @@ export const StyledLogoFooter = styled.div`
 export const StyledCopyright = styled.div`
   width: 100%;
   height: 60px;
-  background-color: #fff;
-  border-top: 1px solid #000;
-  text-align: center;
+  background-color: #1e1e1e;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

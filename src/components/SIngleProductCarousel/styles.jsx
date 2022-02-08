@@ -4,8 +4,9 @@ export const CarouselItem = styled.div`
   margin-top: 30px;
   width: 250px;
   /* height: 180px; */
-  border: 1px solid #1e1e1e;
+
   padding: 14px 20px;
+  text-align: center;
   & .image {
     box-sizing: border-box;
     aspect-ratio: 9 / 6;
@@ -14,6 +15,7 @@ export const CarouselItem = styled.div`
     background-position: center;
     background-size: cover;
     transition: all 0.5s;
+    cursor: pointer;
   }
 
   &:hover .image {
@@ -21,5 +23,16 @@ export const CarouselItem = styled.div`
   }
   &:focus .image {
     transform: scale(1.2);
+  }
+  & h2 {
+    & a {
+      color: #1e1e1e;
+      transition: color 0.5s ease 0s;
+      cursor: pointer;
+      text-decoration: none;
+      &:hover {
+        color: #d73444;
+      }
+    }
   }
 `;
