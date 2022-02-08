@@ -10,7 +10,7 @@ export default function ProductCard({ sneakers }) {
       {sneakers.results.map((item) => (
         <SneakerCard key={item.id} className="box">
           <div
-            class="image"
+            className="image"
             style={{
               backgroundImage: `url(${
                 item.media.imageUrl != null
@@ -19,8 +19,8 @@ export default function ProductCard({ sneakers }) {
               })`,
             }}
           ></div>
-          <div class="text">
-            <h3 class="title">{item.name}</h3>
+          <div className="text">
+            <h3 className="title">{item.name}</h3>
 
             <StyledButton>
               <Link to={`/product/${item.id}`}>Read more</Link>

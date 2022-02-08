@@ -1,23 +1,22 @@
 import ProductCard from "../components/ProductCard/ProductCard";
 import useFetch from "../customHooks/customFetch";
 import { Products } from "./styles";
-
-/* const styles = {
-  minHeight: "500px",
-  backgroundColor: "#eee",
-}; */
+import { useParams } from "react-router-dom";
 
 const Home = () => {
-  const { apiData: sneakers, loading, error } = useFetch("https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=20&brand=adidas&releaseYear=gt:2021&gender=men&");
+  const { brand } = useParams();
+  console.log(brand);
+  const { apiData: sneakers, loading, error } = useFetch("https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=20&brand=" + brand);
 
   return (
     <>
-      <h1>This is the mome page</h1>
+      <div>
+        <h1>Blog Details - {brand}</h1>
+      </div>
 
       <Products>
         {error && <div>{error}</div>}
         {loading && <div>Loading...</div>}
-
         {sneakers && <ProductCard sneakers={sneakers} />}
       </Products>
     </>
@@ -26,4 +25,4 @@ const Home = () => {
 
 export default Home;
 
-/* https://api.thesneakerdatabase.com/v1/sneakers?limit=10&brand=vans&sort=retailPrice:desc */
+/* https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=20&brand=adidas&releaseYear=gt:2021&gender=men& */

@@ -11,10 +11,10 @@ const Navbar = () => {
 
       <S.StyledLinksGroup className="wrapper">
         {/* <S.StyledLink to="/">Home</S.StyledLink> */}
-        <S.StyledLink to="/adidas">Nike</S.StyledLink>
+        <S.StyledLink to="/nike">Nike</S.StyledLink>
         <S.StyledLink to="/adidas">Adidas</S.StyledLink>
-        <S.StyledLink to="/adidas">Reebook</S.StyledLink>
-        <S.StyledLink to="/adidas">Asycs</S.StyledLink>
+        <S.StyledLink to="/reebok">Reebook</S.StyledLink>
+        <S.StyledLink to="/asics">Asycs</S.StyledLink>
       </S.StyledLinksGroup>
     </S.StyledNav>
   );

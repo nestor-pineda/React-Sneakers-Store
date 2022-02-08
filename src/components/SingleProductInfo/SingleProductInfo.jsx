@@ -11,7 +11,7 @@ const SingleProductInfo = () => {
   return (
     <>
       <div>
-        {/* <h1>This is the singel product page with id: {id}</h1> */}
+        <h1>This is the singel product page with id: {id}</h1>
         {error && <div>{error}</div>}
         {loading && <div>Loading...</div>}
         {sneaker && (
