@@ -3,10 +3,22 @@ import useFetch from "../customHooks/customFetch";
 import { Products } from "./styles";
 import { useParams } from "react-router-dom";
 import { Loader } from "./styles";
+import { useState } from "react";
+import { LoadButtonsSection, LoadButton } from "./styles";
 
 const Sneakers = () => {
   const { brand } = useParams();
-  const { apiData: sneakers, loading, error } = useFetch("https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=20&brand=" + brand);
+  const [page, setPage] = useState(0);
+
+  const { apiData: sneakers, loading, error } = useFetch(`https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=20&page=${page}&brand=${brand}`);
+
+  const loadMore = () => {
+    setPage((prevPage) => prevPage + 1);
+  };
+
+  const loadLess = () => {
+    setPage((prevPage) => prevPage - 1);
+  };
 
   return (
     <>
@@ -22,6 +34,31 @@ const Sneakers = () => {
           </Loader>
         )}
         {sneakers && <ProductCard sneakers={sneakers} />}
+        <LoadButtonsSection>
+          <LoadButton onClick={loadLess} className="button-48">
+            <span class="text">
+              {loading ? (
+                "Loading..."
+              ) : (
+                <span>
+                  <img src="/images/back-arrow.svg" alt="back" /> <p>less</p>
+                </span>
+              )}{" "}
+            </span>
+          </LoadButton>
+          <LoadButton onClick={loadMore} className="button-48">
+            <span class="text">
+              {loading ? (
+                "Loading..."
+              ) : (
+                <span>
+                  <p>more</p>
+                  <img src="/images/forward-arrow.svg" alt="back" />
+                </span>
+              )}
+            </span>
+          </LoadButton>
+        </LoadButtonsSection>
       </Products>
     </>
   );
