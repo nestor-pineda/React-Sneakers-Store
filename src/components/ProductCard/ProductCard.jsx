@@ -3,6 +3,7 @@ import { StyledGrid } from "./styles";
 import { Link } from "react-router-dom";
 import { SneakerCard } from "./styles";
 import { StyledButton } from "./styles";
+import { Title } from "./styles";
 
 export default function ProductCard({ sneakers }) {
   return (
@@ -20,13 +21,15 @@ export default function ProductCard({ sneakers }) {
             }}
           ></div>
           <div className="text">
-            <h3 className="title">{item.name}</h3>
+            <Title>
+              <span class="filename__base">
+                <h3 className="title">{item.name}</h3>
+              </span>
+            </Title>
 
             <StyledButton>
               <Link to={`/product/${item.id}`}>Read more</Link>
             </StyledButton>
-
-            {/* <p class="price">{item.retailPrice}</p> */}
           </div>
         </SneakerCard>
       ))}

@@ -186,3 +186,17 @@ export const StyledButton = styled.button`
     }
   }
 `;
+
+export const Title = styled.div`
+  display: flex;
+  min-width: 0;
+  justify-content: center;
+  & .filename__base {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  & .filename__extension {
+    flex-shrink: 0;
+  }
+`;
