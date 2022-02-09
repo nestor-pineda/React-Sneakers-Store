@@ -3,6 +3,7 @@ import useFetch from "../../customHooks/customFetch";
 import { ProductInfo } from "./styles";
 import { Link } from "react-router-dom";
 import { StyledButton } from "./styles";
+import { Loader } from "./styles";
 
 const SingleProductInfo = () => {
   const { id } = useParams();
@@ -11,9 +12,12 @@ const SingleProductInfo = () => {
   return (
     <>
       <div>
-        {/* <h1>This is the singel product page with id: {id}</h1> */}
         {error && <div>{error}</div>}
-        {loading && <div>Loading...</div>}
+        {loading && (
+          <Loader>
+            <img src="/images/loading.svg" alt="loading" />
+          </Loader>
+        )}
         {sneaker && (
           <>
             {sneaker.results.map((item) => {

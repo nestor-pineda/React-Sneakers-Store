@@ -2,11 +2,10 @@ import ProductCard from "../components/ProductCard/ProductCard";
 import useFetch from "../customHooks/customFetch";
 import { Products } from "./styles";
 import { useParams } from "react-router-dom";
-import SingleProductCarousel from "../components/SIngleProductCarousel/SingleProductCarousel";
+import { Loader } from "./styles";
 
-const Home = () => {
+const Sneakers = () => {
   const { brand } = useParams();
-  console.log(brand);
   const { apiData: sneakers, loading, error } = useFetch("https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=20&brand=" + brand);
 
   return (
@@ -17,13 +16,17 @@ const Home = () => {
 
       <Products>
         {error && <div>{error}</div>}
-        {loading && <div>Loading...</div>}
+        {loading && (
+          <Loader>
+            <img src="/images/loading.svg" alt="loading" />
+          </Loader>
+        )}
         {sneakers && <ProductCard sneakers={sneakers} />}
       </Products>
     </>
   );
 };
 
-export default Home;
+export default Sneakers;
 
 /* https://v1-sneakers.p.rapidapi.com/v1/sneakers?limit=20&brand=adidas&releaseYear=gt:2021&gender=men& */
