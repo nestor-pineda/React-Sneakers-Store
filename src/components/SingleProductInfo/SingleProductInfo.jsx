@@ -1,13 +1,16 @@
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { CartContext } from "../../contexts/CartContext";
 import useFetch from "../../customHooks/customFetch";
 import { ProductInfo } from "./styles";
-import { Link } from "react-router-dom";
 import { StyledButton } from "./styles";
 import { Loader } from "./styles";
 
 const SingleProductInfo = () => {
   const { id } = useParams();
   const { apiData: sneaker, loading, error } = useFetch("https://v1-sneakers.p.rapidapi.com/v1/sneakers/" + id);
+
+  const { cartItems, setCartItems } = useContext(CartContext);
 
   return (
     <>
@@ -33,9 +36,7 @@ const SingleProductInfo = () => {
                       <span>Brand:</span> {item.brand}
                     </h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt illum autem soluta voluptas corporis id, dolorum libero mollitia, nulla iusto saepe excepturi modi ullam officia eveniet sequi distinctio eius aliquam.</p>
-                    <StyledButton>
-                      <Link to={`/product/${item.id}`}>Add to cart</Link>
-                    </StyledButton>
+                    <StyledButton onClick={() => setCartItems([...cartItems, item])}>Add to cart</StyledButton>
                   </div>
                 </ProductInfo>
               );
