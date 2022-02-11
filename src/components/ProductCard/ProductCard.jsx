@@ -22,7 +22,7 @@ export default function ProductCard({ sneakers }) {
           ></div>
           <div className="text">
             <Title>
-              <span class="filename__base">
+              <span className="filename__base">
                 <h3 className="title">{item.name}</h3>
               </span>
             </Title>

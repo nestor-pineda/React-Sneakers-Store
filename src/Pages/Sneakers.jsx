@@ -36,7 +36,7 @@ const Sneakers = () => {
         {sneakers && <ProductCard sneakers={sneakers} />}
         <LoadButtonsSection>
           <LoadButton onClick={loadLess} className="button-48">
-            <span class="text">
+            <span className="text">
               {loading ? (
                 "Loading..."
               ) : (
@@ -47,7 +47,7 @@ const Sneakers = () => {
             </span>
           </LoadButton>
           <LoadButton onClick={loadMore} className="button-48">
-            <span class="text">
+            <span className="text">
               {loading ? (
                 "Loading..."
               ) : (

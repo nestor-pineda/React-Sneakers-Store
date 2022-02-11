@@ -101,3 +101,60 @@ export const StyledLink = styled(Link)`
     margin: 0 15px;
   }
 `;
+
+export const StyledCart = styled(Link)`
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+  display: inline-flex;
+  & img {
+    width: 18px;
+    margin: 0px;
+    position: absolute;
+    bottom: -2px;
+    z-index: 100;
+  }
+  & span {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #c03c49;
+    color: white;
+    font-size: 0.6em;
+    border: 0;
+    text-align: center;
+    left: 12px;
+    bottom: 7px;
+    z-index: 99;
+  }
+  @media (min-width: 600px) {
+    & img {
+      width: 20px;
+    }
+    & span {
+      width: 18px;
+      height: 18px;
+      font-size: 0.75em;
+      border: 0;
+      left: 13px;
+      bottom: 8px;
+    }
+  }
+  @media (min-width: 900px) {
+    & img {
+      width: 24px;
+    }
+    & span {
+      width: 20px;
+      height: 20px;
+      font-size: 0.9em;
+      border: 0;
+      left: 15px;
+      bottom: 11px;
+    }
+  }
+`;
+
+export const StyledBubble = styled.span``;

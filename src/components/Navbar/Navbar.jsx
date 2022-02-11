@@ -1,14 +1,15 @@
-import {} from "./styles";
+import { useContext } from "react";
+import { CartContext } from "../../contexts/CartContext";
+// import {} from "./styles";
 
 import * as S from "./styles";
-import { useState } from "react";
 
 const Navbar = () => {
-  const [showCart, setShowCart] = useState(false);
+  const { cartItems } = useContext(CartContext);
 
-  const handleShowCart = () => {
-    setShowCart(!showCart);
-  };
+  const count = cartItems.reduce((counter, obj) => (obj !== undefined ? (counter += 1) : counter), 0);
+
+  console.log(count);
 
   return (
     <S.StyledNav>
@@ -22,10 +23,11 @@ const Navbar = () => {
         <S.StyledLink to="/adidas">Adidas</S.StyledLink>
         <S.StyledLink to="/reebok">Reebook</S.StyledLink>
         <S.StyledLink to="/asics">Asycs</S.StyledLink>
-        <S.StyledLink to="/cart">Cart</S.StyledLink>
+        <S.StyledCart to="/cart">
+          <img srcSet="/images/cart.svg" alt="cart" />
+          <span>{count}</span>
+        </S.StyledCart>
       </S.StyledLinksGroup>
-      <button onClick={handleShowCart}>🛒</button>
-      {showCart && <div>Cart items</div>}
     </S.StyledNav>
   );
 };
