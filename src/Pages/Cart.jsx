@@ -1,7 +1,7 @@
 const AddProduct = () => {
   return (
     <div>
-      <h1>This is the add product page</h1>
+      <h1>This is the add Cart page</h1>
     </div>
   );
 };

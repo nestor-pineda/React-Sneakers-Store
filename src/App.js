@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Sneakers from "./Pages/Sneakers";
-import AddProduct from "./Pages/AddProduct";
+import Cart from "./Pages/Cart";
 import SingleProduct from "./Pages/SingleProduct";
 import Layout from "./components/Layout/Layout";
 
@@ -11,7 +11,7 @@ const App = () => {
         <Routes>
           <Route path="/:brand" element={<Sneakers />} />
           <Route path="/product/:id" element={<SingleProduct />} />
-          <Route path="/add" element={<AddProduct />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </Layout>
     </Router>
