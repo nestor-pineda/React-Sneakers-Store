@@ -8,7 +8,7 @@ export const StyledNav = styled.nav`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1e1e1e;
+  background-color: ${(props) => props.theme.colors.black};
 
   @media (min-width: 600px) {
     flex-direction: row;
@@ -47,11 +47,11 @@ export const StyledLink = styled(Link)`
   position: relative;
   transition: 0.5s color ease;
   text-decoration: none;
-  color: #fff;
+  color: ${(props) => props.theme.colors.white};
   font-size: 1em;
   margin: 0 10px;
   &:hover {
-    color: #d73444;
+    color: ${(props) => props.theme.colors.red};
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: relative;
@@ -69,7 +69,7 @@ export const StyledLink = styled(Link)`
     height: 5px;
     height: 0.35rem;
     width: 0;
-    background: #d73444;
+    background: ${(props) => props.theme.colors.red};
     left: 0;
   }
   &:visited {
@@ -78,8 +78,7 @@ export const StyledLink = styled(Link)`
     position: relative;
     transition: 0.5s color ease;
     text-decoration: none;
-    color: #fff;
-    font-size: 1.2em;
+    color: ${(props) => props.theme.colors.white};
   }
   &:active {
     -webkit-backface-visibility: hidden;
@@ -87,8 +86,6 @@ export const StyledLink = styled(Link)`
     position: relative;
     transition: 0.5s color ease;
     text-decoration: none;
-    color: #81b3d2;
-    font-size: 1.2em;
   }
   &:hover:after {
     width: 100%;
@@ -105,7 +102,7 @@ export const StyledLink = styled(Link)`
 export const StyledCart = styled(Link)`
   position: relative;
   text-decoration: none;
-  color: #fff;
+  color: ${(props) => props.theme.colors.white};
   font-size: 1em;
   display: inline-flex;
   & img {
@@ -120,8 +117,8 @@ export const StyledCart = styled(Link)`
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: #c03c49;
-    color: white;
+    background-color: ${(props) => props.theme.colors.red};
+    color: ${(props) => props.theme.colors.white};
     font-size: 0.6em;
     border: 0;
     text-align: center;

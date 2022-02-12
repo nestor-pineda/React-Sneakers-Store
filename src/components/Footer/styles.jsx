@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
-  background-color: #f5f5f5;
+  background-color: ${(props) => props.theme.colors.greyLight};
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
-  border-top: 1px solid #1e1e1e;
+  border-top: ${(props) => `1px solid ${props.theme.colors.black}`};
 
   & h1 {
-    color: #ff0000;
+    color: ${(props) => props.theme.colors.black};
   }
   @media (min-width: 600px) {
     flex-direction: row;

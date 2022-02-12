@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FooterBlock = styled.div`
   width: 100%;
   max-width: 250px;
-  background-color: #f5f5f5;
+  background-color: ${(props) => props.theme.colors.greyLight};
   margin: 0px 15px;
   padding: 0 10px;
   display: flex;
@@ -14,9 +14,9 @@ export const FooterBlock = styled.div`
   & a {
     display: inline-flex;
     text-decoration: none;
-    color: #1e1e1e;
+    color: ${(props) => props.theme.colors.black};
     &:hover {
-      color: #d73444;
+      color: ${(props) => props.theme.colors.red};
     }
     & svg {
       margin-right: 10px;
@@ -29,7 +29,7 @@ export const FooterBlock = styled.div`
 
 export const StyledLogoFooter = styled.div`
   width: 100%;
-  background-color: #f5f5f5;
+  background-color: ${(props) => props.theme.colors.greyLight};
   margin: 15px 0px 5px 15px;
   padding: 0 10px;
   display: flex;
@@ -54,8 +54,8 @@ export const StyledLogoFooter = styled.div`
 export const StyledCopyright = styled.div`
   width: 100%;
   height: 60px;
-  background-color: #1e1e1e;
-  color: #fff;
+  background-color: ${(props) => props.theme.colors.black};
+  color: ${(props) => props.theme.colors.white};
   display: flex;
   align-items: center;
   justify-content: center;
