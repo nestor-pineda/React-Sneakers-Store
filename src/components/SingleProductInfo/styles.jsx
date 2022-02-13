@@ -57,7 +57,7 @@ export const ProductInfo = styled.div`
     & .product-info {
       width: 45%;
       height: auto;
-      background-color: #fff;
+      background-color: ${(props) => props.theme.colors.white};
       text-align: left;
       padding: 1em;
       & h2 {
@@ -77,10 +77,10 @@ export const ProductInfo = styled.div`
 `;
 
 export const StyledButton = styled.button`
-  background-color: #fff;
-  border: 2px solid #422800;
-  box-shadow: #422800 4px 4px 0 0;
-  color: #422800;
+  background-color: ${(props) => props.theme.colors.white};
+  border: ${(props) => `2px solid ${props.theme.colors.black}`};
+  box-shadow: ${(props) => `${props.theme.colors.black} 4px 4px 0 0`};
+  color: ${(props) => props.theme.colors.black};
   cursor: pointer;
   display: inline-block;
   font-weight: 600;
@@ -94,19 +94,19 @@ export const StyledButton = styled.button`
   touch-action: manipulation;
   margin-bottom: 2rem;
   &:hover {
-    background-color: #fff;
+    background-color: ${(props) => props.theme.colors.white};
   }
 
   &:active {
-    box-shadow: #1e1e1e 2px 2px 0 0;
+    box-shadow: ${(props) => `${props.theme.colors.black} 2px 2px 0 0`};
     transform: translate(2px, 2px);
   }
   & a {
-    color: #d73444;
+    color: ${(props) => props.theme.colors.black};
     text-decoration: none;
     transition: color 0.5s ease 0s;
     &:hover {
-      color: #1e1e1e;
+      color: ${(props) => props.theme.colors.black};
     }
   }
 `;

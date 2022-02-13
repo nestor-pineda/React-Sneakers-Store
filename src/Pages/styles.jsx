@@ -4,13 +4,13 @@ export const Products = styled.div`
   width: 100%;
   height: auto;
   min-height: 80vh;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.white};
 `;
 
 export const Loader = styled.div`
   width: 100%;
   height: 80vh;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.white};
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -32,10 +32,10 @@ export const LoadButtonsSection = styled.div`
 export const LoadButton = styled.button`
   min-width: 130px;
   appearance: none;
-  background-color: #1e1e1e;
+  background-color: ${(props) => props.theme.colors.black};
   border-width: 0;
   box-sizing: border-box;
-  color: #fff;
+  color: ${(props) => props.theme.colors.white};
   cursor: pointer;
   display: inline-block;
   font-family: Open Sans, sans-serif;
@@ -68,7 +68,7 @@ export const LoadButton = styled.button`
   &:before {
     animation: opacityFallbackOut 0.5s step-end forwards;
     backface-visibility: hidden;
-    background-color: #d73444;
+    background-color: ${(props) => props.theme.colors.red};
     clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
     content: "";
     height: 100%;
@@ -86,7 +86,7 @@ export const LoadButton = styled.button`
   }
 
   &:after {
-    background-color: #d73444;
+    background-color: ${(props) => props.theme.colors.red};
   }
 
   & span {

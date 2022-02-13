@@ -5,7 +5,7 @@ export const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.white};
   padding: 1em;
 `;
 
@@ -15,25 +15,25 @@ const Border = keyframes`
     border-color: transparent;
   }
   25% {
-    border-top-color: #1E1E1E;
+    border-top-color: ${(props) => props.theme.colors.black};
   }
   49% {
     border-right-color: transparent;
   }
   50% {
-    border-right-color: #1E1E1E;
+    border-right-color: ${(props) => props.theme.colors.black};
   }
   74% {
     border-bottom-color: transparent;
   }
   75% {
-    border-bottom-color: #1E1E1E;
+    border-bottom-color: ${(props) => props.theme.colors.black};
   }
   99% {
     border-left-color: transparent;
   }
   100% {
-    border-color: #1E1E1E;
+    border-color: ${(props) => props.theme.colors.black};
   }
 `;
 
@@ -107,8 +107,8 @@ const BorderAfter = keyframes`
 export const SneakerCard = styled.div`
   width: 100%;
   height: 350px;
-  background-color: #fff;
-  color: #232323;
+  background-color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.black};
   border: 2px solid transparent;
   position: relative;
   display: inline-block;
@@ -117,7 +117,7 @@ export const SneakerCard = styled.div`
     content: "";
     width: 2px;
     height: 2px;
-    background-color: #1e1e1e;
+    background-color: ${(props) => props.theme.colors.black};
     position: absolute;
     left: -2px;
     top: -2px;
@@ -127,10 +127,10 @@ export const SneakerCard = styled.div`
     content: "";
     position: absolute;
     display: block;
-    background-color: #1e1e1e;
+    background-color: ${(props) => props.theme.colors.black};
   }
   &:hover {
-    border: 2px solid #1e1e1e;
+    border: 2px solid ${(props) => props.theme.colors.black};
     -webkit-animation: ${Border} 1s ease-out 1;
     animation: ${Border} 1s ease-out 1;
   }
@@ -145,7 +145,7 @@ export const SneakerCard = styled.div`
   & .image {
     width: 100%;
     height: 60%;
-    background: #fff center center/cover no-repeat;
+    background: center center/cover no-repeat;
   }
 
   & .text {
@@ -154,7 +154,7 @@ export const SneakerCard = styled.div`
 `;
 
 export const StyledButton = styled.button`
-  background-color: #fff;
+  background-color: ${(props) => props.theme.colors.white};
   border: 2px solid #422800;
   box-shadow: #422800 4px 4px 0 0;
   color: #422800;
@@ -170,7 +170,7 @@ export const StyledButton = styled.button`
   -webkit-user-select: none;
   touch-action: manipulation;
   &:hover {
-    background-color: #fff;
+    background-color: ${(props) => props.theme.colors.white};
   }
 
   &:active {
@@ -182,7 +182,7 @@ export const StyledButton = styled.button`
     text-decoration: none;
     transition: color 0.5s ease 0s;
     &:hover {
-      color: #1e1e1e;
+      color: ${(props) => props.theme.colors.black};
     }
   }
 `;

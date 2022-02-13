@@ -26,12 +26,12 @@ export const CarouselItem = styled.div`
   }
   & h2 {
     & a {
-      color: #1e1e1e;
+      color: ${(props) => props.theme.colors.black};
       transition: color 0.5s ease 0s;
       cursor: pointer;
       text-decoration: none;
       &:hover {
-        color: #d73444;
+        color: ${(props) => props.theme.colors.red};
       }
     }
   }
