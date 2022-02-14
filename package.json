@@ -14,9 +14,12 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-multi-carousel": "^2.6.5",
+    "react-parallax": "^3.3.0",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-scroll-parallax": "^3.0.3",
     "react-slideshow-image": "^3.7.0",
+    "sass": "^1.49.7",
     "styled-components": "^5.3.3",
     "web-vitals": "^2.1.4"
   },
