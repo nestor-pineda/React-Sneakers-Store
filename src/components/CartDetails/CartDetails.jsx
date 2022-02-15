@@ -3,12 +3,18 @@ import { CartContext } from "../../contexts/CartContext";
 import { StyledCartItem } from "./styles";
 
 const CartDetails = () => {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, setCartItems } = useContext(CartContext);
+
+  const deleteItem = (item, index) => {
+    const cartItemsTemp = [...cartItems];
+    cartItemsTemp.splice(index, 1);
+    setCartItems(cartItemsTemp);
+  };
 
   return (
     <div>
       <h1>This is the add Cart page</h1>
-      {cartItems.map((item) => (
+      {cartItems.map((item, index) => (
         <StyledCartItem key={item.id}>
           <div className="left-side">
             <img src={item.media.imageUrl} alt="sneaker" />
@@ -28,6 +34,7 @@ const CartDetails = () => {
             <form>
               <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30"></input>
             </form>
+            <button onClick={() => deleteItem(item, index)}>Delete</button>
           </div>
         </StyledCartItem>
       ))}
