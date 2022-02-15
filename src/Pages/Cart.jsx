@@ -14,7 +14,7 @@ const AddProduct = (props) => {
   };
 
   return (
-    <div>
+    <div style={{ padding: "20px" }}>
       <CartDetails />
       <p>Welcome {userDetails.user.email}</p>
       <button onClick={handleLogout}>Logout</button>
