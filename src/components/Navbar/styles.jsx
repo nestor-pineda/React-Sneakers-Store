@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const StyledNav = styled.nav`
   width: 100%;
-  height: 80px;
+  min-height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -154,4 +154,4 @@ export const StyledCart = styled(Link)`
   }
 `;
 
-export const StyledBubble = styled.span``;
+export const StyledLog = styled.span``;

@@ -1,8 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
-// import {} from "./styles";
 import Logout from "./components/Buttons/Logout";
-
+import Login from "./components/Buttons/Login";
 import * as S from "./styles";
 
 import { useAuthState } from "../../contexts";
@@ -21,7 +20,6 @@ const Navbar = () => {
       </S.StyledLogo>
 
       <S.StyledLinksGroup className="wrapper">
-        {/* <S.StyledLink to="/">Home</S.StyledLink> */}
         <S.StyledLink to="/nike">Nike</S.StyledLink>
         <S.StyledLink to="/adidas">Adidas</S.StyledLink>
         <S.StyledLink to="/reebok">Reebok</S.StyledLink>
@@ -30,9 +28,7 @@ const Navbar = () => {
           <img srcSet="/images/cart.svg" alt="cart" />
           <span>{count}</span>
         </S.StyledCart>
-        {/* <S.StyledLink to="/login">Login</S.StyledLink> */}
-        {/* <Logout /> */}
-        <>{user ? <Logout /> : <S.StyledLink to="/login">Login</S.StyledLink>}</>
+        <S.StyledLog>{user ? <Logout /> : <Login />}</S.StyledLog>
       </S.StyledLinksGroup>
     </S.StyledNav>
   );
