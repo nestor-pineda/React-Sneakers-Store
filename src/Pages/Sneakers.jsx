@@ -4,7 +4,7 @@ import { Products } from "./styles";
 import { useParams } from "react-router-dom";
 import { Loader } from "./styles";
 import { useState } from "react";
-import { LoadButtonsSection, LoadButton } from "./styles";
+import { LoadButtonsSection, Button, StyledH1 } from "./styles";
 
 const Sneakers = () => {
   const { brand } = useParams();
@@ -23,7 +23,7 @@ const Sneakers = () => {
   return (
     <>
       <div>
-        <h1>Blog Details - {brand}</h1>
+        <StyledH1>{brand} Sneakers</StyledH1>
       </div>
 
       <Products>
@@ -35,7 +35,7 @@ const Sneakers = () => {
         )}
         {sneakers && <ProductCard sneakers={sneakers} />}
         <LoadButtonsSection>
-          <LoadButton onClick={loadLess} className="button-48">
+          <Button onClick={loadLess}>
             <span className="text">
               {loading ? (
                 "Loading..."
@@ -45,8 +45,8 @@ const Sneakers = () => {
                 </span>
               )}{" "}
             </span>
-          </LoadButton>
-          <LoadButton onClick={loadMore} className="button-48">
+          </Button>
+          <Button onClick={loadMore} className="button-48">
             <span className="text">
               {loading ? (
                 "Loading..."
@@ -57,7 +57,7 @@ const Sneakers = () => {
                 </span>
               )}
             </span>
-          </LoadButton>
+          </Button>
         </LoadButtonsSection>
       </Products>
     </>

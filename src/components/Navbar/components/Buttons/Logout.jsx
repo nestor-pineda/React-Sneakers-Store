@@ -14,7 +14,7 @@ const Logout = () => {
 
   return (
     <StyledLog onClick={handleLogout}>
-      <span class="material-icons">&#xe9ba;</span>
+      <span className="material-icons">&#xe9ba;</span>
     </StyledLog>
   );
 };

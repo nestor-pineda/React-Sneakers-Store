@@ -29,7 +29,7 @@ export const LoadButtonsSection = styled.div`
   margin: 20px 0px 50px 0px;
 `;
 
-export const LoadButton = styled.button`
+export const Button = styled.button`
   min-width: 130px;
   appearance: none;
   background-color: ${(props) => props.theme.colors.black};
@@ -95,5 +95,28 @@ export const LoadButton = styled.button`
   }
   @media (min-width: 900px) {
     min-width: 160px;
+  }
+`;
+
+export const StyledH1 = styled.h1`
+  text-align: center;
+  color: #1e1e1e;
+  text-transform: uppercase;
+  font-weight: 700;
+`;
+
+export const StyledCart = styled.div`
+  padding: 20px;
+  height: 100vh;
+  width: 100%;
+`;
+
+export const StyledCartH1 = styled.h1`
+  text-align: center;
+  color: #1e1e1e;
+  text-transform: uppercase;
+  font-weight: 700;
+  & span {
+    color: ${(props) => props.theme.colors.red};
   }
 `;

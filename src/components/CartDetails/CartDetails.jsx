@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
-import { StyledCartItem } from "./styles";
+import { StyledCartItem, StyledRemove, StyledInputNumer } from "./styles";
+import "./styles.scss";
 
 const CartDetails = () => {
   const { cartItems, setCartItems } = useContext(CartContext);
@@ -13,7 +14,6 @@ const CartDetails = () => {
 
   return (
     <div>
-      <h1>This is the add Cart page</h1>
       {cartItems.map((item, index) => (
         <StyledCartItem key={item.id}>
           <div className="left-side">
@@ -31,10 +31,13 @@ const CartDetails = () => {
             </div>
           </div>
           <div className="right-side">
-            <form>
-              <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30"></input>
-            </form>
-            <button onClick={() => deleteItem(item, index)}>Delete</button>
+            {/* <form> */}
+            <StyledInputNumer type="number" id="quantity" name="quantity" min="1" max="100" step="1" placeholder="1"></StyledInputNumer>
+
+            {/* </form> */}
+            <StyledRemove onClick={() => deleteItem(item, index)}>
+              <span className="material-icons">&#xe888;</span>
+            </StyledRemove>
           </div>
         </StyledCartItem>
       ))}

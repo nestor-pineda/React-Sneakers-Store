@@ -10,7 +10,7 @@ const Login = () => {
 
   return (
     <StyledLog onClick={navToLogin}>
-      <span class="material-icons">&#xe87c;</span>
+      <span className="material-icons">&#xe87c;</span>
     </StyledLog>
   );
 };

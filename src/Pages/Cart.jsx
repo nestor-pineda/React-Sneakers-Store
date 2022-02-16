@@ -2,6 +2,7 @@ import CartDetails from "../components/CartDetails/CartDetails";
 import React from "react";
 import { useAuthDispatch, logout, useAuthState } from "../contexts";
 import { useNavigate } from "react-router-dom";
+import { StyledCart, StyledCartH1, Button } from "./styles";
 
 const AddProduct = (props) => {
   let navigate = useNavigate();
@@ -14,11 +15,19 @@ const AddProduct = (props) => {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
+    <StyledCart>
+      <StyledCartH1>
+        Welcome to your cart<span> {userDetails.user.email}</span>
+      </StyledCartH1>
+
       <CartDetails />
-      <p>Welcome {userDetails.user.email}</p>
-      <button onClick={handleLogout}>Logout</button>
-    </div>
+
+      <div style={{ width: "100%", textAlign: "center" }}>
+        <Button onClick={handleLogout}>
+          <span className="text"> Logout</span>
+        </Button>
+      </div>
+    </StyledCart>
   );
 };
 

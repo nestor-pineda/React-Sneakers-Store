@@ -9,19 +9,19 @@ const ParallaxSection = () => {
           <div className="box-parallax">
             <h3 className="title">Suscribe Now!</h3>
             <form>
-              <div class="question">
+              <div className="question">
                 <input type="text" required />
                 <label>First Name</label>
               </div>
-              <div class="question">
+              <div clasNames="question">
                 <input type="text" required />
                 <label>Last Name</label>
               </div>
-              <div class="question">
+              <div className="question">
                 <input type="text" required />
                 <label>Email Address</label>
               </div>
-              <div class="question">
+              <div className="question">
                 <input type="text" required />
                 <label>Email Confirm</label>
               </div>

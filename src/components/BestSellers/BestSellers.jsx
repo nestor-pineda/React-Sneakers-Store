@@ -7,22 +7,41 @@ import { Title } from "./styles";
 
 export default function BestSeller({ sneakers }) {
   const relatedProducts = [
-    { name: "White Black", image: "https://images.stockx.com/images/Nike-Dunk-Low-White-Black-2022-W.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1643138443", id: "ad3cba1c-fe72-44f1-b8e3-e4d70d3281fd" },
-    { name: "Summit White", image: "https://images.stockx.com/images/Nike-Retro-GTS-97-Summit-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1642621202", id: "316eab1e-fe98-466d-bf14-b39b622f927d" },
     {
-      name: "Bad Bunny Benito",
-      image: "https://images.stockx.com/images/adidas-Forum-Powerphase-Bad-Bunny-Benito.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1643222537",
-      id: "8ab97a62-ba75-4f5b-8978-3d68c777a256",
+      name: "Varsity Red Black Gum",
+      image: "https://images.stockx.com/images/Nike-SB-Ishod-Wair-Varsity-Red-Black-Gum.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1641661410",
+      id: "da3ea265-4880-4d8c-8f84-0afcc3638c9d",
+    },
+    { name: "No Stripes", image: "https://images.stockx.com/images/adidas-Forum-84-Low-ADV-No-Stripes.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1644369569", id: "f3de8922-1ddf-42ef-a745-7fe0c429ca1f" },
+    {
+      name: "Keith Haring Dancing Figures",
+      image: "https://images.stockx.com/images/Reebok-Classic-Leather-Legacy-AZ-Keith-Haring-Dancing-Figures.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1634128604",
+      id: "a6969b25-36c4-464d-be4d-9e76edae37ae",
     },
     {
-      name: "Bape White",
-      image: "https://images.stockx.com/images/Reebok-Club-C-85-Bape-White-Contrast-Stitch-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1638552556",
-      id: "6df45f6e-cc9f-41c4-9776-557e12e6edf9",
+      name: "Black Clay Grey",
+      image: "https://images.stockx.com/images/ASICS-Gel-Kayano-28-Black-Clay-Grey.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1642100150",
+      id: "de50fd10-a70f-4388-b141-6221152be666",
     },
     {
       name: "Kith Salmon Toe",
       image: "https://images.stockx.com/images/ASICS-Gel-Lyte-V-Kith-Salmon-Toe-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1643116778",
       id: "609bb14e-0185-4adf-9d66-f475b1de9487",
+    },
+    {
+      name: "White Magic Mauve",
+      image: "https://images.stockx.com/images/adidas-Stan-Smith-White-Magic-Mauve-W.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1638818263",
+      id: "d8e179a4-f84a-45f5-9315-554e4de314f2",
+    },
+    {
+      name: "Nike Dunk Low",
+      image: "https://images.stockx.com/images/Nike-Dunk-Low-Goldenrod-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1637177820",
+      id: "4b510649-48a0-40af-abee-3853251ce9da",
+    },
+    {
+      name: "Bronze 56K",
+      image: "https://images.stockx.com/images/Reebok-Classic-Leather-Bronze-56K.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&trim=color&q=90&dpr=2&updated_at=1624343400",
+      id: "d9790ae9-fde0-4d49-8884-7bec5818bf8e",
     },
   ];
 

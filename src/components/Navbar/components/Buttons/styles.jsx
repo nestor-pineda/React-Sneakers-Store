@@ -7,6 +7,7 @@ export const StyledLog = styled.button`
   color: #fff;
   margin-left: 28px;
   margin-top: 2px;
+  cursor: pointer;
   & .material-icons {
     font-size: 16px;
   }

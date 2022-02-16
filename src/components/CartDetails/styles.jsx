@@ -17,7 +17,7 @@ export const StyledCartItem = styled.div`
     flex-wrap: wrap;
     text-align: right;
     /* min-height: 80px; */
-    width: 60px;
+    width: 80px;
 
     & form {
       padding: 0px;
@@ -44,4 +44,34 @@ export const StyledCartItem = styled.div`
       }
     }
   }
+`;
+
+export const StyledInputNumer = styled.input`
+  border: ${(props) => `1px solid ${props.theme.colors.black}`};
+  width: 40px;
+  padding: 3px 0px 3px 5px;
+  border-radius: 0px;
+`;
+
+export const StyledRemove = styled.button`
+  background: transparent;
+  border: none;
+  color: ${(props) => props.theme.colors.greyMedium};
+  &:hover {
+    color: ${(props) => props.theme.colors.red};
+  }
+  &::-webkit-inner-spin-button {
+    opacity: 1;
+  }
+  &::-webkit-outer-spin-button {
+    opacity: 1;
+  }
+  cursor: pointer;
+  & .material-icons {
+    font-size: 20px;
+  }
+  /* @media (min-width: 600px) {
+  }
+  @media (min-width: 900px) {
+  } */
 `;
