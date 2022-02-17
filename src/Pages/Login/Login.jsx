@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { loginUser, useAuthState, useAuthDispatch } from "../../contexts";
 import styles from "./login.module.scss";
 
-function Login(props) {
+const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useAuthDispatch();
@@ -43,6 +43,6 @@ function Login(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Login;

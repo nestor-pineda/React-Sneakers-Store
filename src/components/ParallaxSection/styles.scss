@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 70vh;
+  height: 90vh;
 }
 .box-parallax {
   width: 80%;
@@ -13,6 +13,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.title {
+  font-size: calc(18px + (30 - 18) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .transition,
@@ -30,7 +33,7 @@ form {
   display: inline-block;
   width: 100%;
   box-sizing: border-box;
-  padding: 30px 25px;
+  padding: 10px 25px 40px 25px;
   left: 50%;
   -moz-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
@@ -39,7 +42,7 @@ form {
 }
 form button {
   margin-top: 35px;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.3);
   border: 1px solid #1e1e1e;
   line-height: 0;
   font-size: 17px;
@@ -51,11 +54,12 @@ form button {
   letter-spacing: 0.01em;
   position: relative;
   z-index: 1;
+  width: 100%;
 }
 form button:hover,
 form button:focus {
-  color: #1e1e1e;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #000000;
 }
 form .question {
   position: relative;
@@ -83,7 +87,7 @@ form .question label {
 }
 form .question input[type="text"] {
   appearance: none;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0.3);
   line-height: 0;
   font-size: 17px;
   width: 100%;
@@ -95,11 +99,12 @@ form .question input[type="text"] {
   letter-spacing: 0.01em;
   position: relative;
   z-index: 1;
+  border: 1px solid #1e1e1e;
 }
 form .question input[type="text"]:focus {
   outline: none;
-  background: #ffffff;
-  color: #1e1e1e;
+  background: #1e1e1e;
+  color: #fff;
   margin-top: 30px;
 }
 form .question input[type="text"]:valid {
