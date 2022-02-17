@@ -1,3 +1,9 @@
+# Sneakers Store
+
+![Placeholder Image](mockup.gif)
+
+ I've created this sneakers app store using React JS. The store has an authentication login to access the cart/dashboard page. It fetches the V1 Sneakers Rapid API to get the data. It's designed mobile-first and has an SVG motion animation that I created. I've used parallax and CSS transitions to give a cool look.
+ 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
