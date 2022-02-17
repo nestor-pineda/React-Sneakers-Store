@@ -7,7 +7,7 @@ const ParallaxSection = () => {
       <Parallax bgImage={"images/formulario.jpg"} strength={400}>
         <div className="container-parallax">
           <div className="box-parallax">
-            <h3 className="title">Suscribe Now!</h3>
+            <h3 className="newsletter-title">Suscribe Now!</h3>
             <form>
               <div className="question">
                 <input type="text" required />
